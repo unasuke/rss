@@ -21,7 +21,7 @@ class Time
             (?:T
             (\d\d):(\d\d)(?::(\d\d))?
             (\.\d+)?
-            (Z|[+-]\d\d:\d\d)?)?
+            (Z|[+-]\d\d:?\d\d)?)?
             \s*\z/ix =~ date and (($5 and $8) or (!$5 and !$8))
           datetime = [$1.to_i, $2.to_i, $3.to_i, $4.to_i, $5.to_i, $6.to_i]
           usec = 0
